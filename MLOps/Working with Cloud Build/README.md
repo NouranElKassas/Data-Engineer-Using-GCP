@@ -1,13 +1,13 @@
-<h3>Task 1: Confirm that needed APIs are enabled</h3>
-1. Make a note of the name of your Google Cloud project. This value is shown in the top bar of the Google Cloud Console. It will be of the form qwiklabs-gcp- followed by hexadecimal numbers.
-2. In the Google Cloud Console, on the Navigation menu(Navigation menu), click Marketplace.
-3. Click Enable APIs and Services.
-4. In the Search for APIs & Services box, enter Cloud Build.
-5. In the resulting card for the Cloud Build API, if you do not see a message confirming that the Cloud Build API is enabled, click the ENABLE button.
-6. Use the Back button to return to the previous screen with a search box. In the search box, enter Container Registry or ou will find it as a feature.
-7. In the resulting card for the Container Registry API, if you do not see a message confirming that the Container Registry API is enabled, click the ENABLE button.
+# Task 1: Confirm that needed APIs are enabled
+1.  Make a note of the name of your Google Cloud project. This value is shown in the top bar of the Google Cloud Console. It will be of the form qwiklabs-gcp- followed by hexadecimal numbers.
+2.  In the Google Cloud Console, on the Navigation menu(Navigation menu), click Marketplace.
+3.  Click Enable APIs and Services.
+4.  In the Search for APIs & Services box, enter Cloud Build.
+5.  In the resulting card for the Cloud Build API, if you do not see a message confirming that the Cloud Build API is enabled, click the ENABLE button.
+6.  Use the Back button to return to the previous screen with a search box. In the search box, enter Container Registry or ou will find it as a feature.
+7.  In the resulting card for the Container Registry API, if you do not see a message confirming that the Container Registry API is enabled, click the ENABLE button.
 
-<h3>Task 2. Building Containers with DockerFile and Cloud Build</h3>
+# Task 2. Building Containers with DockerFile and Cloud Build
 
 On the Google Cloud Console title bar, click Activate Cloud Shell. 
 When prompted, click Continue. 
@@ -53,17 +53,17 @@ In Cloud Shell, run the following command to build the Docker container image in
 ```
 gcloud builds submit --tag gcr.io/${GOOGLE_CLOUD_PROJECT}/quickstart-image .
 ```
+```
 Important:
 Don't miss the dot (".") at the end of the command. The dot specifies that the source code is in the current working directory at build time.
 ```
-
 When the build completes, your Docker image is built and pushed to Container Registry.
 
 In the Google Cloud Console, on the Navigation menu (Navigation menu), click Container Registry > Images.
 
 The quickstart-image Docker image appears in the list
 
-<h3>Task 3. Building Containers with a build configuration file and Cloud Build</h3>
+# Task 3. Building Containers with a build configuration file and Cloud Build
 Cloud Build also supports custom build configuration files. In this task you will incorporate an existing Docker container using a custom YAML-formatted build file with Cloud Build.
 
 In Cloud Shell enter the following command to clone the repository to the lab Cloud Shell.
@@ -109,7 +109,7 @@ build2.png
 
 The details of the build, including the build log, are displayed.
 
-<h3>Task 4. Building and Testing Containers with a build configuration file and Cloud Build</h3>
+# Task 4. Building and Testing Containers with a build configuration file and Cloud Build
 
 The true power of custom build configuration files is their ability to perform other actions, in parallel or in sequence, in addition to simply building containers: running tests on your newly built containers, pushing them to various destinations, and even deploying them to Kubernetes Engine. In this lab, we will see a simple example: a build configuration file that tests the container it built and reports the result to its calling environment.
 
